@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+<h1>Dashboard</h1>
+<h2>Register for Courses</h2>
+<form action="/dashboard/register_course" method="POST">
+    <select name="courseId">
+        <% courses.forEach(course => { %>
+            <option value="<%= course.id %>"><%= course.course_name %></option>
+        <% }); %>
+    </select>
+    <button type="submit">Register</button>
+</form>
+<a href="/results">View Results</a>
+<a href="/logout">Logout</a>
+</body>
+</html>

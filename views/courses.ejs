@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Courses</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+<h1>Available Courses</h1>
+<ul>
+    <% courses.forEach(course => { %>
+        <li><%= course.course_name %> (<%= course.course_code %>)</li>
+    <% }); %>
+</ul>
+<a href="/dashboard">Back to Dashboard</a>
+<a href="/logout">Logout</a>
+</body>
+</html>
